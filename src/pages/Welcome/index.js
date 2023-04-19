@@ -26,15 +26,15 @@ export default function Welcome() {
             </View>
 
             <Animatable.View dalay= {700} animation='fadeInUp' style= { styles.containerForms}>
-                <Text style={styles.title}>Rapido, Pratico e Eficiente</Text>
-                <Text style={styles.text}>Cadastre sua Empresa!</Text>
+                <Text style={styles.title}>O mais Rapido, Pratico e Eficiente!</Text>
+                <Text style={styles.text}>Como esta sua fome hoje?</Text>
                 
 
                 <TouchableOpacity 
                     style={styles.button}
                     onPress={ () => navigation.navigate('SignIn')}>
                     
-                    <Text style={styles.buttonText}>Cadastre-se </Text>
+                    <Text style={styles.buttonText}>Acesse </Text>
                 </TouchableOpacity>
 
 
