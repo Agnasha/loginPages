@@ -1,16 +1,26 @@
-import React from 'react';
+
+import React,{ useState } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
 import * as Animatable from 'react-native-animatable'
-import{} from '@expo/vector-icons';
+import{ Ionicons} from '@expo/vector-icons';
 
 
 export default function SignIn() {
+
+    const[input,setInput]= useState('');
+    const[hidePass, setHidePass] = useState(true);
+
+
+
+
+
     return (
         <View style={styles.container}>
             <Animatable.View animation='fadeInLeft' delay={500} style={styles.containerHeader}>
 
                 <Text style={styles.massage}>Olá Bem vindo(a)</Text>
+                
                 <Text style={styles.text}></Text>
 
             </Animatable.View>
@@ -22,13 +32,47 @@ export default function SignIn() {
                 <TextInput
                     placeholder='@Faminto'
                     style={styles.input}
+                   
                 />
 
                 <Text style={styles.title}>Senha:</Text>
+
+                <View style={styles.inputArea}>
                 <TextInput
                     placeholder='Digite sua senha'
-                    style={styles.input}
+                    style={styles.inputSenha}
+                    value={input}
+                    onChange={(texto)=> setInput(texto) }
+                    secureTextEntry={hidePass}
                 />
+                <TouchableOpacity style={styles.icon} onPress={ () => setHidePass (!hidePass)}>
+                 { hidePass ?
+                    <Ionicons name='eye' color="#fff" size = {25}/>
+                    :
+                    <Ionicons name='eye-off' color="#fff" size = {25}/>
+                 }
+                    
+                    
+
+                </TouchableOpacity>
+                </View>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                 <TouchableOpacity style={styles.button}>
                     <Text style={ styles.buttonText}>Acessar</Text>
@@ -80,9 +124,40 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color:'#ff8c00',
     },
-    input:{
+    //INPUT DE SENHA e EYE ICON
+
+    inputArea:{
+        flexDirection:'row',
+        width:'100%',
         borderBottomWidth:1,
-        height: 40,
+        borderRadius:15,
+        height:50,
+        alignItems:'center',
+
+    },
+    inputSenha:{
+        width:'85%',
+        height:60,
+        color:"#000",
+        padding:18,
+        fontSize:16,
+
+    },
+    icon:{
+        width:'15%',
+        height:50,
+        justifyContent:'center',
+        alignItems:'center',
+        backgroundColor:'#ff8c00',        
+        borderBottomWidth:1,
+    },
+
+    input:{
+        
+        borderRadius:15,
+        borderBottomWidth:1,
+        height:50,
+        padding:18,
         marginBottom:12,
         fontSize:16,
         
