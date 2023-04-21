@@ -1,20 +1,22 @@
 
 import React,{ useState } from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 
 import * as Animatable from 'react-native-animatable'
 import{ Ionicons} from '@expo/vector-icons';
 
 import styles from './style.js'
+import { useNavigation } from '@react-navigation/native';
 
 
 export default function SignIn() {
+    const navigation = useNavigation();
 
     const[input,setInput]= useState('');
     const[hidePass, setHidePass] = useState(true);
 
 
-
+    
 
 
     return (
@@ -65,7 +67,10 @@ export default function SignIn() {
 
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.buttonRegister}>
+                <TouchableOpacity 
+                    style={styles.buttonRegister}
+                    onPress={ () => navigation.navigate('NewUser') }>
+                    
                     <Text style={ styles.registerText}>Não Possui uma conta? Cadastre-se </Text>
 
                 </TouchableOpacity>
@@ -76,4 +81,3 @@ export default function SignIn() {
         </View>
     );
 }
-// Area de estilos 

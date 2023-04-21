@@ -2,7 +2,6 @@ import React from 'react';
 import { 
     View, 
     Text,
-    StyleSheet,
     Image,
     TouchableOpacity,
 } from 'react-native';
@@ -11,7 +10,7 @@ import styles from './style.js';
 //Biblioteca de animação. 
 import * as Animatable from 'react-native-animatable';
 
-import { useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Welcome() {
     const navigation = useNavigation();

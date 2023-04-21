@@ -4,6 +4,8 @@ import Welcome from '../pages/Welcome'
 
 import SignIn from '../pages/SignIn'
 
+import NewUser from '../pages/NewUser';
+
 const Stack = createNativeStackNavigator();
 
 export default function Routes(){
@@ -17,6 +19,11 @@ export default function Routes(){
             <Stack.Screen
             name='SignIn'
             component={SignIn}
+            options={{ headerShown: false }}
+            />
+            <Stack.Screen
+            name='NewUser'
+            component={NewUser}
             options={{ headerShown: false }}
             />
         </Stack.Navigator>
