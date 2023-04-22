@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { useNavigation } from '@react-navigation/native';
+import * as Animatable from 'react-native-animatable'
+
 import styles from './style.js';
 
 export default function NewUser() {
@@ -22,31 +24,42 @@ export default function NewUser() {
             <KeyboardAwareScrollView
                 style={{ flex: 1, width: '100%' }}
                 keyboardShouldPersistTaps="always">
-                <Image
+
+               <Animatable.View animation='flipInY'>
+               <Image
                     style={styles.logo}
                     source={require('../../assets/logo.png')}
                 />
+                </Animatable.View>     
+                
+                <Animatable.View animation='fadeInLeft' delay={500}>
                 <TextInput
                     style={styles.input}
                     placeholder='Nome Completo'
-                    placeholderTextColor="#aaaaaa"
+                    placeholderTextColor="#696969"
                     onChangeText={(text) => setFullName(text)}
                     value={fullName}
                     underlineColorAndroid="transparent"
                     autoCapitalize="none"
                 />
+
+                </Animatable.View>
+                <Animatable.View animation='fadeInLeft'delay={400}>
                 <TextInput
                     style={styles.input}
                     placeholder='E-mail'
-                    placeholderTextColor="#aaaaaa"
+                    placeholderTextColor="#696969"
                     onChangeText={(text) => setEmail(text)}
                     value={email}
                     underlineColorAndroid="transparent"
                     autoCapitalize="none"
                 />
+
+                </Animatable.View>
+                <Animatable.View animation='fadeInLeft'delay={300}>
                 <TextInput
                     style={styles.input}
-                    placeholderTextColor="#aaaaaa"
+                    placeholderTextColor="#696969"
                     secureTextEntry
                     placeholder='Senha'
                     onChangeText={(text) => setPassword(text)}
@@ -54,9 +67,12 @@ export default function NewUser() {
                     underlineColorAndroid="transparent"
                     autoCapitalize="none"
                 />
+
+                </Animatable.View>
+                <Animatable.View animation='fadeInLeft'delay={200}>
                 <TextInput
                     style={styles.input}
-                    placeholderTextColor="#aaaaaa"
+                    placeholderTextColor="#696969"
                     secureTextEntry
                     placeholder='Confirme a Senha'
                     onChangeText={(text) => setConfirmPassword(text)}
@@ -64,6 +80,9 @@ export default function NewUser() {
                     underlineColorAndroid="transparent"
                     autoCapitalize="none"
                 />
+
+                </Animatable.View>
+                
                 <TouchableOpacity
                     style={styles.button}
                     onPress={() => onRegisterPress()}>

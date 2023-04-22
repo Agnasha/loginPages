@@ -4,20 +4,25 @@ export default StyleSheet.create({
     
     container: {
         flex: 1,
-        backgroundColor:'#ff8c00',
+        backgroundColor:'#fff',
         alignItems: 'center'
     },
     title: {
 
     },
     logo: {
-        flex: 1,
-        height: 120,
-        width: 90,
+        backgroundColor:'#ff8c00',
+        
+        borderRadius:100,
+        flex: 2,
+        height: 150,
+        width: 150,
         alignSelf: "center",
-        margin: 30
+        margin: 30,
+        
     },
     input: {
+        
         height: 50,
         borderRadius: 15,
         borderBottomWidth:1,
@@ -30,14 +35,14 @@ export default StyleSheet.create({
         paddingLeft: 16
     },
     button: {
-        backgroundColor: '#c46c00f3',
-        marginLeft: 30,
-        marginRight: 30,
-        marginTop: 20,
-        height: 48,
-        borderRadius: 5,
-        alignItems: "center",
-        justifyContent: 'center'
+        backgroundColor:'#ff8c00',
+        width:'60%',
+        borderRadius:4,
+        paddingVertical:10,
+        marginTop:18,
+        alignSelf: 'center',
+        justifyContent:'center',
+        alignItems:'center'
     },
     buttonTitle: {
         color: 'white',
@@ -54,7 +59,7 @@ export default StyleSheet.create({
         color: '#2e2e2d'
     },
     footerLink: {
-        color: "#fff",
+        color: "#ff8c00",
         fontWeight: "bold",
         fontSize: 16
     }

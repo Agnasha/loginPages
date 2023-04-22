@@ -45,7 +45,7 @@ export default function SignIn() {
                 <TextInput
                     placeholder='Digite sua senha'
                     style={styles.inputSenha}
-                    value={input}
+                    
                     onChange={(texto)=> setInput(texto) }
                     secureTextEntry={hidePass}
                 />
