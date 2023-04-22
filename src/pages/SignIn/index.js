@@ -57,7 +57,6 @@ export default function SignIn({navigation}) {
                     style={styles.inputSenha}
                     value={senha}
                     onChangeText={(texto)=> setSenha(texto) }
-                    secureTextEntry={hidePass}
                 />
                 <TouchableOpacity style={styles.icon} onPress={ () => setHidePass (!hidePass)}>
                  { hidePass ?

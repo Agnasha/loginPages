@@ -22,7 +22,7 @@ export default StyleSheet.create({
       paddingEnd: '5%',
   },
   title:{
-      color:'#000',
+      color:'#2e2e2d',
       
       fontSize:25,
       fontWeight:'bold',
