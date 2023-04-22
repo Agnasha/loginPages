@@ -6,6 +6,8 @@ import {
     TouchableOpacity,
 } from 'react-native';
 import styles from './style.js';
+import { useEffect } from 'react';
+import { auth } from '../../config/firebase.js';
 
 //Biblioteca de animação. 
 import * as Animatable from 'react-native-animatable';
@@ -14,6 +16,18 @@ import { useNavigation } from '@react-navigation/native';
 
 export default function Welcome() {
     const navigation = useNavigation();
+
+    useEffect(()=> {
+        const estadoUsurario = auth.onAuthStateChanged(
+            usuario => {
+                if (usuario){
+                    navigation.replace('Home')   
+                } 
+            }
+        )
+        return () => estadoUsurario();
+    },[])
+
     return (
          <View style={ styles.container}>
             <View style={ styles.containerLogo}>

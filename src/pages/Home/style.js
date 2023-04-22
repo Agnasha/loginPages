@@ -1,38 +1,55 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
+  container:{
+      flex: 1,
+      backgroundColor:'#ff8c00'
+  },
+  containerLogo:{
+      flex: 2,
+      backgroundColor:'#ff8c00',
+      justifyContent: "center",
+      alignItems: "center",
+      
+  },
+  containerForms:{
+      flex: 1,
+      backgroundColor:'#fff',       
+      borderTopLeftRadius:25,
+      borderTopRightRadius: 25,
 
-  container: {
-    flex: 1,
-    backgroundColor: '#ff8c00',
-    alignItems: 'center'
+      paddingStart: '5%',
+      paddingEnd: '5%',
   },
-  logo: {
-    flex: 1,
-    height: 120,
-    width: 90,
-    alignSelf: "center",
-    margin: 30
+  title:{
+      color:'#000',
+      
+      fontSize:25,
+      fontWeight:'bold',
+      marginTop:28,
+      marginBottom:12,
   },
-  button: {
-    backgroundColor: '#c46c00f3',
-    marginLeft: 30,
-    marginRight: 30,
-    marginTop: 20,
-    height: 48,
-    borderRadius: 5,
-    alignItems: "center",
-    justifyContent: 'center'
+  text:{
+      color:'#a1a1a1',
+      marginTop:10,
+      
   },
-  buttonTitle: {
-    color: 'white',
-    fontSize: 16,
-    fontWeight: "bold"
+  button:{
+      position:'absolute',
+      backgroundColor:'#ff8c00',
+      borderRadius:50,
+      paddingVertical: 8,
+      width:'50%',
+      alignSelf: 'center',
+      bottom:'15%',
+      alignItems:'center',
+      justifyContent:'center',
   },
-  texto: {
-    color: 'white',
-    fontSize: 16,
-    fontWeight: "bold",
-    justifyContent: 'center'
+  buttonText:{
+      fontSize:18,
+      color:'#fff',
+      fontWeight:'bold',
+
+
   }
-});
+})

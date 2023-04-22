@@ -1,23 +1,32 @@
 
 import React,{ useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { logar } from '../../servicos/requisicoesFirebase.js';
 
 import * as Animatable from 'react-native-animatable'
 import{ Ionicons} from '@expo/vector-icons';
 
 import styles from './style.js'
-import { useNavigation } from '@react-navigation/native';
+import { auth } from '../../config/firebase.js';
 
 
-export default function SignIn() {
-    const navigation = useNavigation();
 
-    const[input,setInput]= useState('');
+
+export default function SignIn({navigation}) {
+    
     const[hidePass, setHidePass] = useState(true);
-
+    const[email, setEmail] = useState('');
+    const[senha, setSenha] = useState('');
 
     
 
+    async function realizarLogin(){
+        const resultado = await logar(email, senha);
+        console.log(resultado)
+        navigation.replace('Home')
+    }
+
+    
 
     return (
         <View style={styles.container}>
@@ -36,7 +45,8 @@ export default function SignIn() {
                 <TextInput
                     placeholder='@Faminto'
                     style={styles.input}
-                   
+                    value={email}
+                    onChangeText={texto => setEmail(texto)}
                 />
 
                 <Text style={styles.title}>Senha:</Text>
@@ -45,8 +55,8 @@ export default function SignIn() {
                 <TextInput
                     placeholder='Digite sua senha'
                     style={styles.inputSenha}
-                    value={input}
-                    onChange={(texto)=> setInput(texto) }
+                    value={senha}
+                    onChangeText={(texto)=> setSenha(texto) }
                     secureTextEntry={hidePass}
                 />
                 <TouchableOpacity style={styles.icon} onPress={ () => setHidePass (!hidePass)}>
@@ -62,7 +72,9 @@ export default function SignIn() {
                 </View>
                 
 
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity 
+                    style={styles.button}
+                    onPress={ ()=> realizarLogin()}>
                     <Text style={ styles.buttonText}>Acessar</Text>
 
                 </TouchableOpacity>
