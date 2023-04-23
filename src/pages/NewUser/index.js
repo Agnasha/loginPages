@@ -212,8 +212,8 @@ export default function NewUser({ navigation }) {
                         placeholderTextColor="#696969"
                         secureTextEntry
                         placeholder='Senha'
-                        onChangeText={(text) => setPassword(text)}
-                        value={password}
+                        onChangeText={(text) => setSenha(text)}
+                        value={senha}
                         underlineColorAndroid="transparent"
                         autoCapitalize="none"
                     />
@@ -226,8 +226,8 @@ export default function NewUser({ navigation }) {
                         placeholderTextColor="#696969"
                         secureTextEntry
                         placeholder='Confirme a Senha'
-                        onChangeText={(text) => setConfirmPassword(text)}
-                        value={confirmPassword}
+                        onChangeText={(text) => setConfirmaSenha(text)}
+                        value={confirmaSenha}
                         underlineColorAndroid="transparent"
                         autoCapitalize="none"
                     />
