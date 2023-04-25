@@ -21,7 +21,7 @@ function errosFirebase(error) {
   return mensagem;
 }
 
-export async function cadastrar(email, senha, confirmaSenha) {
+export async function cadastrar(email, senha) {
   const resultado = await createUserWithEmailAndPassword(auth, email, senha)
     .then((dadosDoUsuario) => {
       console.log(dadosDoUsuario)
