@@ -88,8 +88,45 @@ export default function NewUser({ navigation }) {
                         mensagemError={mensagemError}
 
                     />
+                </Animatable.View>
+
+                <Animatable.View animation='fadeInDown' delay={200} >
+                    <TextInputMask
+                        style={styles.input}
+                        type={'cpf'}
+                        value={cpf}
+                        onChangeText={text => setCpf(text)}
+                        placeholder='CPF'
+                        placeholderTextColor="#696969"
+                        keyboardType='numeric'
+                        underlineColorAndroid="transparent"
+                        autoCapitalize="none"
+
+
+                    />
+                </Animatable.View>
+
+                <Animatable.View animation='fadeInDown' delay={100} >
+                    <TextInputMask
+
+                        style={styles.input}
+                        type={'cel-phone'}
+                        options={{
+                            maskType: 'BRL',
+                            withDDD: true,
+                            dddMask: '(99) '
+                        }}
+                        value={cell}
+                        onChangeText={text => setCell(text)}
+                        placeholder='Telefone'
+                        placeholderTextColor="#696969"
+                        underlineColorAndroid="transparent"
+                        autoCapitalize="none"
+                    />
 
                 </Animatable.View>
+
+
                 <Animatable.View animation='fadeInLeft' delay={400}>
                     <TextInput
                         style={styles.input}
@@ -137,102 +174,7 @@ export default function NewUser({ navigation }) {
 
                 
 
-               <Animatable.View animation='flipInY'>
-                    <Image
-                        style={styles.logo}
-                        source={require('../../assets/logo.png')}
-                    />
-                </Animatable.View>
-
-                <Animatable.View animation='fadeInDown' >
-
-                    <TextInput
-                        style={styles.input}
-                        placeholder='Nome Completo'
-                        placeholderTextColor="#696969"
-                        onChangeText={(text) => setFullName(text)}
-                        value={fullName}
-                        underlineColorAndroid="transparent"
-                        autoCapitalize="none"
-                    />
-
-                </Animatable.View>
-
-                <Animatable.View animation='fadeInDown' delay={100} >
-                    <TextInputMask
-
-                        style={styles.input}
-                        type={'cel-phone'}
-                        options={{
-                            maskType: 'BRL',
-                            withDDD: true,
-                            dddMask: '(99) '
-                        }}
-                        value={cell}
-                        onChangeText={text => setCell(text)}
-                        placeholder='Telefone'
-                        placeholderTextColor="#696969"
-                        underlineColorAndroid="transparent"
-                        autoCapitalize="none"
-                    />
-
-                </Animatable.View>
-                <Animatable.View animation='fadeInDown' delay={200} >
-                    <TextInputMask
-                        style={styles.input}
-                        type={'cpf'}
-                        value={cpf}
-                        onChangeText={text => setCpf(text)}
-                        placeholder='CPF'
-                        placeholderTextColor="#696969"
-                        keyboardType='numeric'
-                        underlineColorAndroid="transparent"
-                        autoCapitalize="none"
-
-
-                    />
-                </Animatable.View>
-
-                <Animatable.View animation='fadeInDown' delay={300}>
-                    <TextInput
-                        style={styles.input}
-                        placeholder='E-mail'
-                        placeholderTextColor="#696969"
-                        onChangeText={(text) => setEmail(text)}
-                        value={email}
-                        underlineColorAndroid="transparent"
-                        autoCapitalize="none"
-                    />
-
-
-                </Animatable.View>
-                <Animatable.View animation='fadeInDown' delay={400}>
-                    <TextInput
-                        style={styles.input}
-                        placeholderTextColor="#696969"
-                        secureTextEntry
-                        placeholder='Senha'
-                        onChangeText={(text) => setSenha(text)}
-                        value={senha}
-                        underlineColorAndroid="transparent"
-                        autoCapitalize="none"
-                    />
-
-                </Animatable.View>
-
-                <Animatable.View animation='fadeInDown' delay={500}>
-                    <TextInput
-                        style={styles.input}
-                        placeholderTextColor="#696969"
-                        secureTextEntry
-                        placeholder='Confirme a Senha'
-                        onChangeText={(text) => setConfirmaSenha(text)}
-                        value={confirmaSenha}
-                        underlineColorAndroid="transparent"
-                        autoCapitalize="none"
-                    />
-
-                </Animatable.View>
+              
 
                 <TouchableOpacity
                     style={styles.button}
