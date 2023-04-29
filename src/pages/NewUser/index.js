@@ -75,7 +75,7 @@ export default function NewUser({ navigation }) {
                     />
                 </Animatable.View>
 
-                <Animatable.View animation='fadeInLeft' delay={500}>
+                <Animatable.View animation='fadeInDown' delay={500}>
                     <TextInput
                         style={styles.input}
                         placeholder='Nome Completo'
@@ -90,7 +90,7 @@ export default function NewUser({ navigation }) {
                     />
                 </Animatable.View>
 
-                <Animatable.View animation='fadeInDown' delay={200} >
+                <Animatable.View animation='fadeInDown' delay={400} >
                     <TextInputMask
                         style={styles.input}
                         type={'cpf'}
@@ -106,7 +106,7 @@ export default function NewUser({ navigation }) {
                     />
                 </Animatable.View>
 
-                <Animatable.View animation='fadeInDown' delay={100} >
+                <Animatable.View animation='fadeInDown' delay={300} >
                     <TextInputMask
 
                         style={styles.input}
@@ -127,7 +127,7 @@ export default function NewUser({ navigation }) {
                 </Animatable.View>
 
 
-                <Animatable.View animation='fadeInLeft' delay={400}>
+                <Animatable.View animation='fadeInDown' delay={200}>
                     <TextInput
                         style={styles.input}
                         placeholder='E-mail'
@@ -141,7 +141,7 @@ export default function NewUser({ navigation }) {
                     />
 
                 </Animatable.View>
-                <Animatable.View animation='fadeInLeft' delay={300}>
+                <Animatable.View animation='fadeInDown' delay={100}>
                     <TextInput
                         style={styles.input}
                         placeholderTextColor="#696969"
@@ -156,7 +156,7 @@ export default function NewUser({ navigation }) {
                     />
 
                 </Animatable.View>
-                <Animatable.View animation='fadeInLeft' delay={200}>
+                <Animatable.View animation='fadeInDown'>
                     <TextInput
                         style={styles.input}
                         placeholderTextColor="#696969"

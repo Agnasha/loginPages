@@ -19,6 +19,7 @@ export default function SignIn({ navigation }) {
     const [senha, setSenha] = useState('');
     const [statusError, setStatusError] = useState('');
     const [mensagemError, setMensagemError] = useState('');
+    const [input,setInput] = useState('');
 
 
 
@@ -77,6 +78,7 @@ export default function SignIn({ navigation }) {
                         style={styles.inputSenha}
                         value={senha}
                         onChangeText={(texto) => setSenha(texto)}
+                        secureTextEntry={hidePass}
                         error={statusError == 'senha'}
                         mensagemError={mensagemError}
                     />
