@@ -7,13 +7,17 @@ export default StyleSheet.create({
       justifyContent: "center",
       backgroundColor:'#ff8c00'
   },
+  logoUsuario: {
+    justifyContent: "space-between",
+    flexDirection: "row",
+    paddingTop: 20,
+  },
   containerNavbar:{
     backgroundColor:'#ff8c00',
     borderRadius:30,
     padding:10,
     marginTop:5,
     marginVertical:5,
-    
 
   },
   item:{
@@ -57,15 +61,16 @@ export default StyleSheet.create({
       color:'#ff8c00',
       fontWeight:'bold',
       fontSize:20,
-      marginTop:10,
+      marginTop:30,
       marginBottom:5,
+      marginLeft: 15,
       
   },
   text1:{
     color:'#000',
     fontSize:20,
     marginBottom:10,
-    
+    marginTop:30,
 },
   button:{
       position:'absolute',

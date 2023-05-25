@@ -49,7 +49,8 @@ export default function Home({ navigation }) {
 
 
             <Animatable.View dalay={700} animation='fadeInUp' style={styles.containerForms}>
-                <Text style={styles.text}>Usuário:  </Text><Text style={styles.text1}>{usuario.email}</Text>
+
+                <View style = {styles.logoUsuario}>
                 <View style={styles.Logo}>
                     <Animatable.Image
 
@@ -63,6 +64,11 @@ export default function Home({ navigation }) {
 
 
                 </View>
+                <Text style={styles.text}>Usuário:  </Text><Text style={styles.text1}>{usuario.email}</Text>
+
+                
+                </View>
+                
                 <Text style={styles.title}>Produtos </Text>
 
 

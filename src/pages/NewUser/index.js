@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { Alert, Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { useNavigation } from '@react-navigation/native';
-import * as Animatable from 'react-native-animatable'
-import { TextInputMask } from 'react-native-masked-text'
+import * as Animatable from 'react-native-animatable';
+import { TextInputMask } from 'react-native-masked-text';
 import styles from './style.js';
 import { cadastrar } from '../../servicos/requisicoesFirebase.js';
 
@@ -53,6 +53,7 @@ export default function NewUser({ navigation }) {
                 setEmail('')
                 setSenha('')
                 setConfirmaSenha('')
+                setCell('')
                 navigation.replace('SignIn')
             } else {
                 Alert.alert(resultado);
