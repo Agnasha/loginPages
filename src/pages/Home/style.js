@@ -3,27 +3,50 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   container:{
       flex: 1,
+      
+      justifyContent: "center",
       backgroundColor:'#ff8c00'
   },
-  containerLogo:{
-      flex: 2,
-      backgroundColor:'#ff8c00',
-      justifyContent: "center",
-      alignItems: "center",
+  containerNavbar:{
+    backgroundColor:'#ff8c00',
+    borderRadius:30,
+    padding:10,
+    marginTop:5,
+    marginVertical:5,
+    
+
+  },
+  item:{
+    backgroundColor:'#fff',
+    padding:15,
+    marginVertical:6,
+    marginVertical:13,
+    borderRadius:20,
+  },
+  prod:{
+    fontSize:15,
+    color:'#000',
+    borderRadius:20,
+
+  },
+  Logo:{
+      height:100,
+      width:100,
+      backgroundColor:'#ff8c00', 
+      borderRadius:100,
       
   },
-  containerForms:{
+  containerForms:{//flatlist
       flex: 1,
       backgroundColor:'#fff',       
       borderTopLeftRadius:25,
       borderTopRightRadius: 25,
-
       paddingStart: '5%',
       paddingEnd: '5%',
   },
   title:{
       color:'#000',
-      
+      textAlign:'center',
       fontSize:25,
       fontWeight:'bold',
       marginTop:28,
@@ -31,7 +54,9 @@ export default StyleSheet.create({
   },
   text:{
       color:'#a1a1a1',
+      fontSize:20,
       marginTop:10,
+      marginBottom:10,
       
   },
   button:{
@@ -39,11 +64,12 @@ export default StyleSheet.create({
       backgroundColor:'#ff8c00',
       borderRadius:50,
       paddingVertical: 8,
-      width:'50%',
+      width:'30%',
       alignSelf: 'center',
       bottom:'15%',
       alignItems:'center',
       justifyContent:'center',
+      
   },
   buttonText:{
       fontSize:18,
