@@ -34,7 +34,7 @@ export default function Home({ navigation }) {
             id: '004',
             desc: ['Açai', '25.00']
         },
-    
+
     ]
 
     function deslogar() {
@@ -44,30 +44,30 @@ export default function Home({ navigation }) {
 
     return (
         <View style={styles.container}>
-             
+
 
 
 
             <Animatable.View dalay={700} animation='fadeInUp' style={styles.containerForms}>
-            <Text style={styles.text}>Usuário: {usuario.email} </Text>
-            <View style={styles.Logo}>
-                <Animatable.Image
+                <Text style={styles.text}>Usuário:  </Text><Text style={styles.text1}>{usuario.email}</Text>
+                <View style={styles.Logo}>
+                    <Animatable.Image
 
-                    animation='flipInY' dalay={700}
-                    source={require('../../assets/logo.png')}
-                    style={{ width: '100%',height:'100%'}}
-                    resizeMode='contain'
-                    
-                />
-                
+                        animation='flipInY' dalay={700}
+                        source={require('../../assets/logo.png')}
+                        style={{ width: '100%', height: '100%' }}
+                        resizeMode='contain'
+
+                    />
 
 
-            </View>
+
+                </View>
                 <Text style={styles.title}>Produtos </Text>
-                
 
 
-                
+
+
                 <View style={styles.containerNavbar}>
                     <FlatList
                         data={produtos}
@@ -88,10 +88,10 @@ export default function Home({ navigation }) {
 
 
 
-                
+
 
             </Animatable.View>
-            
+
 
 
         </View>

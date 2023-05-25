@@ -20,7 +20,6 @@ export default StyleSheet.create({
     backgroundColor:'#fff',
     padding:15,
     marginVertical:6,
-    marginVertical:13,
     borderRadius:20,
   },
   prod:{
@@ -30,10 +29,12 @@ export default StyleSheet.create({
 
   },
   Logo:{
-      height:100,
-      width:100,
-      backgroundColor:'#ff8c00', 
-      borderRadius:100,
+
+    height:100,
+    width:100,
+    
+    backgroundColor:'#ff8c00', 
+    borderRadius:100,
       
   },
   containerForms:{//flatlist
@@ -53,12 +54,19 @@ export default StyleSheet.create({
       marginBottom:12,
   },
   text:{
-      color:'#a1a1a1',
+      color:'#ff8c00',
+      fontWeight:'bold',
       fontSize:20,
       marginTop:10,
-      marginBottom:10,
+      marginBottom:5,
       
   },
+  text1:{
+    color:'#000',
+    fontSize:20,
+    marginBottom:10,
+    
+},
   button:{
       position:'absolute',
       backgroundColor:'#ff8c00',
